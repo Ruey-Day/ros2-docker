@@ -26,6 +26,9 @@ RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | \
 # Install colcon
 RUN pip3 install -U colcon-common-extensions
 
+# Install PyBullet and useful packages
+RUN pip3 install pybullet numpy opencv-python
+
 # Source ROS setup on shell startup
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
